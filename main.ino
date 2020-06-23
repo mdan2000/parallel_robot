@@ -188,7 +188,7 @@ void intersection(double r, double a, double b, double c, int side, double dx, d
   }
 }
 
-void rotate_from_zero(double dx, double dy) {
+void rotate(double dx, double dy) {
   Serial.println("test");
   double mid = 90;
   delay(2000);
@@ -214,10 +214,10 @@ void loop() {
   server.handleClient();
   delay(5000);
   Serial.println("Now to -0 -0");
-  rotate_from_zero(0, 0);
+  rotate(0, 0);
   delay(5000);
   Serial.println("Now to -3 -3");
-  rotate_from_zero(-3, -3);
+  rotate(-3, -3);
 }
 
 void handleRoot() {
